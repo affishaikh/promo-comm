@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "promo-comm-lib": [
+        "dist/promo-comm-lib"
+      ],
+      "promo-comm-lib/*": [
+        "dist/promo-comm-lib/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

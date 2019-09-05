@@ -348,6 +348,41 @@
           }
         }
       }
+    },
+    "promo-comm-lib": {
+      "projectType": "library",
+      "root": "projects/promo-comm-lib",
+      "sourceRoot": "projects/promo-comm-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/promo-comm-lib/tsconfig.lib.json",
+            "project": "projects/promo-comm-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/promo-comm-lib/src/test.ts",
+            "tsConfig": "projects/promo-comm-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/promo-comm-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/promo-comm-lib/tsconfig.lib.json",
+              "projects/promo-comm-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "promo-comm"
