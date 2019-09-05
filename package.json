@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:elements": "ng build --prod && node build.js"
+    "build:elements": "ng build promo-comm-element --prod && node build.js"
   },
   "private": true,
   "dependencies": {

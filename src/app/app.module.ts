@@ -1,23 +1,23 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule, Injector, DoBootstrap } from "@angular/core";
 import { MyLibModule } from "my-lib";
-import { AppComponent } from "./app.component";
+import { PromoCommComponent } from "./app.component";
 import { createCustomElement } from "@angular/elements";
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [PromoCommComponent],
   imports: [BrowserModule, MyLibModule],
   providers: [],
-  entryComponents: [AppComponent]
+  entryComponents: [PromoCommComponent]
 })
-export class AppModule implements DoBootstrap {
+export class PromoCommModule {
   constructor(private injector: Injector) {}
 
-  ngDoBootstrap() {
-    const promoCommElement = createCustomElement(AppComponent, {
-      injector: this.injector
-    });
-    // Register the custom element with the browser.
-    customElements.define("promo-comm-element", promoCommElement);
-  }
+  // ngDoBootstrap() {
+  //   const promoCommElement = createCustomElement(PromoCommComponent, {
+  //     injector: this.injector
+  //   });
+  //   // Register the custom element with the browser.
+  //   customElements.define("promo-comm-element", promoCommElement);
+  // }
 }
